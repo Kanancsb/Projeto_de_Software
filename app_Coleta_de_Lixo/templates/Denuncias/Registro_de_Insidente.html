@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Insidentes</title>
+    <link href="{% static 'css/bootstrap-5.3.3-dist/css/bootstrap.css' %}" rel="stylesheet"
+</head>
+<body>
+    <nav class="nav justify-content-center">
+      <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Página Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Registrar Insidente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+    </nav>
+
+    <div class="col-md-6 offset-md-3">
+        <form action="/" method="POST" class="row g-3 needs-validation" novalidate>
+
+            <h1>Dados do Entrevistado</h1>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="title" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder='João'>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="sobrenome" class="form-label">Sobrenome:</label>
+                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder='Silva'>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="sexo" class="form-label">Sexo:</label>
+                        <select class="form-select"id="sexo" name="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="estado-civil" class="form-label">Estado Civil:</label>
+                        <select id="estadoCivil" name="estadoCivil" class="form-select">
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="outros">Outros(as)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="data-de-nascimento" class="form-label">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="dataNascimentoEntrevistado" name="dataNascimentoEntrevistado">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="escolaridadeEntrevistado" class="form-label">Escolaridade:</label>
+                        <select class="form-select" id="escolaridadeEntrevistado" name="escolaridadeEntrevistado">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="naturalidade" class="form-label">Naturalidade:</label>
+                            <select id="naturalidade" name="naturalidade" class="form-select">
+
+                            </select>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" name="bairro">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="cidade" class="form-label">Cidade:</label>
+                        <select class="form-control" id="nomeCidade" name="nomeCidade">
+                            @php
+                                $cidades = DB::table('cidades')->pluck('nome');
+                                foreach ($cidades as $cidade) {
+                                    echo '<option value="' . $cidade . '">' . $cidade . '</option>';
+                                }
+                            @endphp
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="telefone" class="form-label">Telefone:</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="celular">Celular:</label>
+                    <input type="text" class="form-control" id="celular" name="celular">
+                </div>
+
+            </div><br>
+
+            <div class="form-group">
+                <label for="e-mail" class="form-label">E-Mail:</label>
+                <input type="text" class="form-control" id="email" name="email">
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+</html>
