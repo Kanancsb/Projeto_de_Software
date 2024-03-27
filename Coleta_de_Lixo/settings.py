@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'Coleta_de_Lixo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Coleta_de_Lixo_db',
+        'NAME': 'db_PROJETO_DE_SOFTWARE',
         'USER': 'postgres',
         'PASSWORD': 'c$5Cw8z5x@2vgT5&',
         'HOST': 'localhost',
