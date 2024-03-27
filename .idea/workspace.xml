@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Projeto_de_Software.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0002_alter_registrodeinsidentes_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0003_remove_registrodeinsidentes_id_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0004_endereco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0005_complementos_remove_endereco_id_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0006_remove_endereco_cod_endereco_endereco_complemento_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0007_delete_endereco_delete_registrodeinsidentes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0008_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0009_remove_endereco_complemento.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0010_enderecos_delete_endereco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +38,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2eCbEWCgf9oTg2nYXOCQHEa9Uwv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,20 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static" />
