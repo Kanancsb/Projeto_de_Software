@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0002_alter_registrodeinsidentes_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0003_remove_registrodeinsidentes_id_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0004_endereco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0005_complementos_remove_endereco_id_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0006_remove_endereco_cod_endereco_endereco_complemento_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0007_delete_endereco_delete_registrodeinsidentes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0008_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0009_remove_endereco_complemento.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0010_enderecos_delete_endereco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/BaseTemplate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_Incidente.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +80,9 @@
       <option name="presentableId" value="Default" />
       <updated>1711411395443</updated>
       <workItem from="1711411402634" duration="4917000" />
+      <workItem from="1711742079092" duration="126000" />
+      <workItem from="1712013388352" duration="3377000" />
+      <workItem from="1712017258190" duration="1532000" />
     </task>
     <servers />
   </component>
