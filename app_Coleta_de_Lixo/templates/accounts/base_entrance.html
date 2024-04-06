@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/bootstrap-5.3.3-dist/css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav justify-content-center">
+      <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Página Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'registro_incidente' %}">Registrar Incidente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

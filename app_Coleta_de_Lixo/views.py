@@ -20,3 +20,6 @@ def registro_incidente(request):
 
 def home(request):
     return render(request, 'Home.html')
+
+def login(request):
+    return render(request, 'registration/login.html')
