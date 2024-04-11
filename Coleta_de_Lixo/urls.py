@@ -1,7 +1,7 @@
-from django.urls import path
-from app_Coleta_de_Lixo import views
+from django.urls import path, include
+from django.contrib import admin
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('Denuncias/Registro_Incidente/', views.registro_incidente, name='registro_incidente'),
+    path('admin/', admin.site.urls),
+    path('', include('app_Coleta_de_Lixo.urls'))
 ]

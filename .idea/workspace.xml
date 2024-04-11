@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/BaseTemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_Incidente.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/account/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_de_Insidente.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -49,7 +49,9 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PreAuth&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kanan/PycharmProjects/Projeto_de_Software&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,6 +85,8 @@
       <workItem from="1711742079092" duration="126000" />
       <workItem from="1712013388352" duration="3377000" />
       <workItem from="1712017258190" duration="1532000" />
+      <workItem from="1712709571701" duration="930000" />
+      <workItem from="1712793326229" duration="2747000" />
     </task>
     <servers />
   </component>
