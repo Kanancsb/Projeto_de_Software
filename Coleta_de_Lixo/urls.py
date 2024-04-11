@@ -1,9 +1,7 @@
 from django.urls import path, include
-from app_Coleta_de_Lixo import views
+from django.contrib import admin
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('Denuncias/Registro_Incidente/', views.registro_incidente, name='registro_incidente'),
-    path('registration/login', views.login, name='login'),
-    path('accounts/', include('allauth.urls')),
+    path('admin/', admin.site.urls),
+    path('', include('app_Coleta_de_Lixo.urls'))
 ]

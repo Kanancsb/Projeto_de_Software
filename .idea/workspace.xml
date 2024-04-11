@@ -5,69 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/account_inactive.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/base_entrance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/base_manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/base_manage_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/base_manage_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/base_reauthenticate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/account_already_exists_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/account_already_exists_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/base_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/base_notification.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_changed_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_changed_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirm_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirm_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirmation_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirmation_signup_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirmation_signup_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_confirmation_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_deleted_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/email_deleted_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_changed_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_changed_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_reset_key_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_reset_key_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_reset_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_reset_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_set_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/password_set_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/unknown_account_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email/unknown_account_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email_change.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/email_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/cannot_delete_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/email_confirmation_failed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/email_confirmation_sent.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/email_confirmed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/email_deleted.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/logged_in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/logged_out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/password_changed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/password_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/primary_email_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/messages/unverified_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_change.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_reset_from_key.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_reset_from_key_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/password_set.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/reauthenticate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/signup_closed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/snippets/already_logged_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/snippets/warn_no_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/verification_sent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/accounts/verified_email_required.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/openid/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/openid/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/account/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" afterDir="false" />
     </list>
@@ -81,6 +23,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -101,25 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/kanan/PycharmProjects/Projeto_de_Software/app_Coleta_de_Lixo/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PreAuth&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kanan/PycharmProjects/Projeto_de_Software&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\app_Coleta_de_Lixo\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software" />
@@ -143,8 +84,9 @@
       <workItem from="1711411402634" duration="4917000" />
       <workItem from="1711742079092" duration="126000" />
       <workItem from="1712013388352" duration="3377000" />
-      <workItem from="1712017258190" duration="1585000" />
-      <workItem from="1712432738224" duration="5613000" />
+      <workItem from="1712017258190" duration="1532000" />
+      <workItem from="1712709571701" duration="930000" />
+      <workItem from="1712793326229" duration="2747000" />
     </task>
     <servers />
   </component>
