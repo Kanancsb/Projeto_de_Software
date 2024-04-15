@@ -1,85 +1,73 @@
 {% load static %}
-
+{% include 'BaseTemplate.html' %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Registro de Incidentes</title>
-    <link href="{% static 'css/bootstrap-5.3.3-dist/css/bootstrap.css' %}" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav justify-content-center">
-      <ul class="nav nav-underline">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Página Inicial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'registro_incidente' %}">Registrar Incidente</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-    </nav>
+    <section class="vh-100">
+        <div class="card text-black" style="border-radius: 25px;">
+            <div class="col-md-6 offset-md-3">
+                <form action="{% url 'registro_incidente' %}" method="POST" class="row g-3 needs-validation" novalidate>
+                    {% csrf_token %}
+                    <h1>Registro de Incidente</h1>
 
-    <div class="col-md-6 offset-md-3">
-        <form action="{% url 'registro_incidente' %}" method="POST" class="row g-3 needs-validation" novalidate>
-            {% csrf_token %}
-            <h1>Registro de Incidente</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="rua" class="form-label">Rua:</label>
+                            <input type="text" class="form-control" id="rua" name="rua" required>
+                        </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="rua" class="form-label">Rua:</label>
-                    <input type="text" class="form-control" id="rua" name="rua" required>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="numero-casa" class="form-label">Número:</label>
-                        <input type="text" class="form-control" id="numero-casa" name="numero-casa" pattern="[0-9]+">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="numero-casa" class="form-label">Número:</label>
+                                <input type="text" class="form-control" id="numero-casa" name="numero-casa" pattern="[0-9]+">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="bairro" class="form-label">Bairro:</label>
-                    <input type="text" class="form-control" id="bairro" name="bairro" required>
-                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="bairro" class="form-label">Bairro:</label>
+                            <input type="text" class="form-control" id="bairro" name="bairro" required>
+                        </div>
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="complemento" class="form-label">Complemento:</label>
-                        <input type="text" class="form-control" id="complemento" name="complemento">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="complemento" class="form-label">Complemento:</label>
+                                <input type="text" class="form-control" id="complemento" name="complemento">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="Tipo_de_Insidente" class="form-label">Tipo de Incidente:</label>
-                        <select id="Tipo_de_Insidente" name="Tipo_de_Insidente" class="form-select">
-                            <option value="entulho" selected>Entulho</option>
-                            <option value="local-coleta-quebrado">Local de coleta com defeito</option>
-                            <option value="residuo-perigoso">Resíduo perigoso</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="Tipo_de_Insidente" class="form-label">Tipo de Incidente:</label>
+                                <select id="Tipo_de_Insidente" name="Tipo_de_Insidente" class="form-select">
+                                    <option value="entulho" selected>Entulho</option>
+                                    <option value="local-coleta-quebrado">Local de coleta com defeito</option>
+                                    <option value="residuo-perigoso">Resíduo perigoso</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="texto-descricao" class="form-label">Descrição:</label>
+                                <textarea class="form-control" id="texto-descricao" name="texto-descricao" rows="3"></textarea>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <label for="texto-descricao" class="form-label">Descrição:</label>
-                        <textarea class="form-control" id="texto-descricao" name="texto-descricao" rows="3"></textarea>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-success" value="Enviar">
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="submit" class="btn btn-success" value="Enviar">
-                </div>
+                </form>
             </div>
-
-        </form>
-    </div>
+        </div>
+    </section>
 </body>
 </html>
