@@ -12,7 +12,8 @@ class RegistroDeInsidentes(models.Model):
         db_table = 'REGISTRO_INSIDENTES'
 
 class Endereco(models.Model):
-    CIDADE = models.CharField(max_length=30, primary_key=True, default='Frederico Westphalen')
+    COD_ENDERECO = models.AutoField(primary_key=True)
+    CIDADE = models.CharField(max_length=30, default='Frederico Westphalen')
     BAIRRO = models.CharField(max_length=30)
     RUA = models.CharField(max_length=30)
     NUMERO =models.CharField(max_length=5, null=True)

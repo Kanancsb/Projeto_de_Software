@@ -55,3 +55,7 @@ def login_view(request):
         else:
             messages.error(request, 'Usuário ou senha inválidos.')
             return render(request, 'account/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')
