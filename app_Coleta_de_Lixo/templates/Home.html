@@ -11,19 +11,39 @@
         <div class="row justify-content-center align-items-center" style="height: 40vh;">
             <div class="col-sm-12 col-md-10">
                 <div class="card text-white bg-dark mb-3" id="title_div">
-                    <p class="text-light">Bem-vindo ao nosso Aplicativo de Monitoramento e Coleta de Resíduos - sua solução completa para uma gestão eficaz de resíduos e um passo significativo em direção à sustentabilidade ambiental!</p>
+                    <ul class="list-group">
+                            <li class="list-group-item bg-dark text-white"><p class="text-light">Bem-vindo ao nosso Aplicativo de Monitoramento e Coleta de Resíduos - sua solução completa para uma gestão eficaz de resíduos e um passo significativo em direção à sustentabilidade ambiental!</p></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 30vh;">
+            <div class="col-sm-12 col-md-10">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header text-success">Descarte adequado, Reciclagem Promovida:</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item bg-dark text-white"><p class="card-text">Nosso aplicativo foi meticulosamente desenvolvido para simplificar o processo de descarte de resíduos e incentivar a reciclagem. Com uma interface intuitiva e funcionalidades abrangentes, estamos aqui para atender às suas necessidades e facilitar o gerenciamento tanto para usuários quanto para administradores.</p></li>
+                        </ul>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 10vh;">
+        <div class="row justify-content-center align-items-center" style="height: 30vh;">
             <div class="col-sm-12 col-md-10">
                 <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">Descarte adequado, Reciclagem Promovida:</div>
+                    <div class="card-header text-success">Plataforma Dinâmica:</div>
                     <div class="card-body">
-                        <p class="card-text">Nosso aplicativo foi meticulosamente desenvolvido para simplificar o processo de descarte de resíduos e incentivar a reciclagem. Com uma interface intuitiva e funcionalidades abrangentes, estamos aqui para atender às suas necessidades e facilitar o gerenciamento tanto para usuários quanto para administradores.</p>
+                        <ul class="list-group">
+                            <li class="list-group-item bg-dark text-white">Um ambiente interativo onde usuários e administradores têm acesso fácil a informações essenciais sobre coleta e descarte de resíduos.</li>
+                            <li class="list-group-item bg-dark text-white">Gerenciamento simplificado de dados para garantir uma experiência sem complicações.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -31,35 +51,20 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 60vh;">
+        <div class="row justify-content-center align-items-center" style="height: 30vh;">
             <div class="col-sm-12 col-md-10">
                 <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">Plataforma Dinâmica:</div>
+                    <div class="card-header"> <a class="nav-link text-success" href="{% url 'registro_incidente' %}">Registrar Incidente:</a> </div>
                     <div class="card-body">
-                        <p class="card-text">
-                            Um ambiente interativo onde usuários e administradores têm acesso fácil a informações essenciais sobre coleta e descarte de resíduos.
-                            <br>Gerenciamento simplificado de dados para garantir uma experiência sem complicações.
-                        </p>
+                        <ul class="list-group">
+                            <li class="list-group-item bg-dark text-white">Capacidade para os usuários reportarem problemas específicos, como acúmulos de resíduos em áreas específicas.</li>
+                            <li class="list-group-item bg-dark text-white">Um sistema dedicado para o registro eficiente e acompanhamento de incidentes, permitindo uma resposta rápida e eficaz.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 40vh;">
-            <div class="col-sm-12 col-md-10">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">Registro de Incidentes:</div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Capacidade para os usuários reportarem problemas específicos, como acúmulos de resíduos em áreas específicas.
-                            <br>Um sistema dedicado para o registro eficiente e acompanhamento de incidentes, permitindo uma resposta rápida e eficaz.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

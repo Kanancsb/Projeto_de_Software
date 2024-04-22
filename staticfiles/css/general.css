@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'PtSerif-Regular';
+    src: url('Fonts/PT_Serif/PtSerif-Regular.ttf') format('truetype');
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+body{
+    background-color: #0c120c;
+}
+
+#title_div{
+    font-family: 'PtSerif-Regular', serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+.click_tittle{
+    font-family: 'PtSerif-Regular', serif;
+    text-align: center;
+    font-size: 26px;
+}
+
+.card-text{
+    font-family: 'Roboto-Medium', serif;
+    text-align: left;
+    font-size: 20px;
+}
+
+.card-header{
+    font-family: 'PtSerif-Regular', serif;
+    font-size: 26px;
+}

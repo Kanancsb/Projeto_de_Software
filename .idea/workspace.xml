@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/general.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coleta_de_Lixo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/BaseTemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/BaseTemplate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/account/general.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/general.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +43,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PreAuth&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kanan/PycharmProjects/Projeto_de_Software&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "PreAuth",
+    "last_opened_file_path": "C:/Users/kanan/PycharmProjects/Projeto_de_Software/static/icons",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\icons" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\css" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\css\account" />
@@ -94,7 +99,7 @@
       <workItem from="1713211020670" duration="4590000" />
       <workItem from="1713319621295" duration="694000" />
       <workItem from="1713483596898" duration="4357000" />
-      <workItem from="1713809953152" duration="592000" />
+      <workItem from="1713809953152" duration="3695000" />
     </task>
     <servers />
   </component>
