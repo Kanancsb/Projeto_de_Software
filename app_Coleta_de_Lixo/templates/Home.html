@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <title>Página Inicial</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map{
+            width: 400px;
+            height: 300px;
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -61,6 +72,34 @@
                             <li class="list-group-item bg-dark text-white">Um sistema dedicado para o registro eficiente e acompanhamento de incidentes, permitindo uma resposta rápida e eficaz.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 30vh;">
+            <div class="col-sm-12 col-md-10">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header text-success"> Ultimos incidentes registrados </div>
+                        <div class="card-body" style="display: flex; justify-content: space-between;">
+                            <div id='map' style='width: 400px; height: 300px;'></div>
+                            <script>
+                                mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A';
+                                var map = new mapboxgl.Map({
+                                    container: 'map',
+                                    style: 'mapbox://styles/mapbox/streets-v11',
+                                    zoom: 15,
+                                    center: [-53.39444, -27.35917]
+                                });
+                            </script>
+                            <div>
+                                <tr>
+                                    <td>Rua Cabo Rocha, 644 - Dejetos Organicos </td><br>
+                                    <td>Rua Tamoyo, 80 - Lixo Eletrônico</td>
+                                </tr>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
