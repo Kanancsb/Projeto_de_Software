@@ -21,20 +21,8 @@ def registro_incidente(request):
     return render(request, 'Denuncias/Registro_Incidente.html')
 
 def home(request):
-    location = geocoder.mapbox('Frederico Westphalen, RS', key='pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGRyZ3RqMjRydzJscGhveWU0OGV6OSJ9.Gz0A7HBkkC0W9rI3mbt0SQ')
-    markers = [
-        {'name': 'Frederico Westphalen', 'latitude': -27.35917, 'longitude': -53.39444},
-    ]
-    context = {
-        'latitude': location.latlng[0],
-        'longitude': location.latlng[1],
-        'token': 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGRyZ3RqMjRydzJscGhveWU0OGV6OSJ9.Gz0A7HBkkC0W9rI3mbt0SQ',
-        'map_style': 'mapbox://styles/mapbox/streets-v11',
-        'zoom': 9,
-        'center': [-27.35917, -53.39444],
-        'interactive': True
-    }
-    return render(request, 'home.html', context)
+
+    return render(request, 'home.html')
 
 def signup(request):
     if request.method == 'GET':
