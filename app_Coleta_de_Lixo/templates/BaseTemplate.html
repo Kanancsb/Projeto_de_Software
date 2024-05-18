@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="{% static 'icons/favicon.png' %}">
 </head>
 <body>
-    <nav class="nav justify-content-center navbar-light" style="background-color: #133213;">
+    <nav class="nav justify-content-center navbar-light" style="background-color: #0c120c;">
       <ul class="nav nav-underline">
           <li class="nav-item">
             <a class="nav-link text-white" href="{% url 'home' %}">Página Inicial</a>
@@ -16,6 +16,9 @@
             <a class="nav-link text-white" href="{% url 'registro_incidente' %}">Registrar Incidente</a>
           </li>
           {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'admin:index' %}">Painel Administrativo</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="{% url 'logout' %}">Sair</a>
           </li>

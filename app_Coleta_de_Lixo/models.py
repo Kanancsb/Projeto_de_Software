@@ -24,3 +24,13 @@ class Endereco(models.Model):
 
     class Meta:
         db_table = 'ENDERECO'
+
+class LinkEndereco(models.Model):
+    COD_LINK = models.AutoField(primary_key=True)
+    ENDERECO_URL = models.URLField(null=False, max_length=200)
+    NOME_LINK = models.CharField(null=True, max_length=50)
+    def __str__(self):
+        return self.ENDERECO_URL
+
+    class Meta:
+        db_table = 'LINK_ENDERECO'

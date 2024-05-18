@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import RegistroDeInsidentes, Endereco
+from .models import RegistroDeInsidentes, Endereco, LinkEndereco
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -21,8 +21,23 @@ def registro_incidente(request):
     return render(request, 'Denuncias/Registro_Incidente.html')
 
 def home(request):
-
-    return render(request, 'home.html')
+    ultimos_links = LinkEndereco.objects.order_by('-COD_LINK')[:3]
+    location = geocoder.mapbox('Frederico Westphalen, RS',
+                               key='pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A')
+    markers = [
+        {'name': 'Frederico Westphalen', 'latitude': -27.35917, 'longitude': -53.39444},
+    ]
+    context = {
+        'latitude': location.latlng[0],
+        'longitude': location.latlng[1],
+        'token': 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A',
+        'map_style': 'mapbox://styles/mapbox/streets-v11',
+        'zoom': 15,
+        'center': [-53.39444, -27.35917],
+        'interactive': True,
+        'ultimos_links': ultimos_links
+    }
+    return render(request, 'home.html', context)
 
 def signup(request):
     if request.method == 'GET':

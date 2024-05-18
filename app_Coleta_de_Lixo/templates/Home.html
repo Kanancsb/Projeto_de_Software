@@ -93,11 +93,12 @@
                                     center: [-53.39444, -27.35917]
                                 });
                             </script>
-                            <div>
-                                <tr>
-                                    <td>Rua Cabo Rocha, 644 - Dejetos Organicos </td><br>
-                                    <td>Rua Tamoyo, 80 - Lixo Eletrônico</td>
-                                </tr>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    {% for link in ultimos_links %}
+                                        <li class="list-group-item bg-dark text-white"><a href="{{ link.ENDERECO_URL }}" class="nav-link text-white">{{ link.NOME_LINK }}</a></li>
+                                    {% endfor %}
+                                </ul>
                             </div>
                         </div>
                 </div>
