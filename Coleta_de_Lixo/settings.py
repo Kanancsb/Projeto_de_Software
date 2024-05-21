@@ -41,6 +41,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Coleta_de_Lixo.urls'
 
+SESSION_COOKIE_AGE = 86400
+
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROSER_CLOSE = False
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

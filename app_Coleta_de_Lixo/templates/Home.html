@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Página Inicial</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
 
     <style>
         #map{
@@ -90,7 +90,7 @@
                                     container: 'map',
                                     style: 'mapbox://styles/mapbox/streets-v11',
                                     zoom: 15,
-                                    center: [-53.39444, -27.35917]
+                                    center: [{{ longitude|safe }}, {{ latitude|safe }}]
                                 });
                             </script>
                             <div class="card-body">
