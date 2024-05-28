@@ -1,16 +1,5 @@
 from django.db import models
 
-class RegistroDeInsidentes(models.Model):
-    COD_REGISTRO = models.BigAutoField(auto_created=True, primary_key=True, serialize=False)
-    TIPO_INSIDENTE = models.CharField(max_length=30)
-    DESCRICAO_INSIDENTE = models.CharField(max_length=500, null=True)
-
-    def __str__(self):
-        return self.TIPO_INSIDENTE
-
-    class Meta:
-        db_table = 'REGISTRO_INSIDENTES'
-
 class Endereco(models.Model):
     COD_ENDERECO = models.AutoField(primary_key=True)
     CIDADE = models.CharField(max_length=30, default='Frederico Westphalen')
@@ -20,10 +9,26 @@ class Endereco(models.Model):
     COMPLEMENTO = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.CIDADE
+        return f"{self.RUA}, {self.NUMERO}, {self.BAIRRO}"
 
     class Meta:
         db_table = 'ENDERECO'
+        verbose_name = 'Endereço'
+        verbose_name_plural = 'Endereços'
+
+class RegistroDeInsidentes(models.Model):
+    COD_REGISTRO = models.BigAutoField(auto_created=True, primary_key=True, serialize=False)
+    TIPO_INSIDENTE = models.CharField(max_length=30)
+    DESCRICAO_INSIDENTE = models.CharField(max_length=500, null=True)
+    ENDERECO = models.ForeignKey(Endereco, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.TIPO_INSIDENTE
+
+    class Meta:
+        db_table = 'REGISTRO_INSIDENTES'
+        verbose_name = 'Registro de Incidente'
+        verbose_name_plural = 'Registros de Incidentes'
 
 class LinkEndereco(models.Model):
     COD_LINK = models.AutoField(primary_key=True)
@@ -36,3 +41,5 @@ class LinkEndereco(models.Model):
 
     class Meta:
         db_table = 'LINK_ENDERECO'
+        verbose_name = 'Link de Endereço'
+        verbose_name_plural = 'Links de Endereços'
