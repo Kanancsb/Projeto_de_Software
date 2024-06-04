@@ -20,29 +20,44 @@ def registro_incidente(request):
 
     return render(request, 'Denuncias/Registro_Incidente.html')
 
+
 def home(request):
     ultimos_links = LinkEndereco.objects.order_by('-COD_LINK')[:3]
-    last_link = LinkEndereco.objects.last()
 
-    if last_link is not None:
-        latitude = last_link.LATITUDE_LINK
-        longitude = last_link.LONGITUDE_LINK
+    if ultimos_links.exists():  # Verifica se a queryset não está vazia
+        last_link = LinkEndereco.objects.last()
+
+        if last_link is not None:
+            latitude = last_link.LATITUDE_LINK
+            longitude = last_link.LONGITUDE_LINK
+        else:
+            latitude = -27.35917
+            longitude = -53.39444
+
+        context = {
+            'latitude': latitude,
+            'longitude': longitude,
+            'token': 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A',
+            'map_style': 'mapbox://styles/mapbox/streets-v11',
+            'zoom': 15,
+            'center': [longitude, latitude],
+            'interactive': True,
+            'ultimos_links': ultimos_links
+        }
     else:
-        latitude = -27.35917
-        longitude = -53.39444
-
-    context = {
-        'latitude': latitude,
-        'longitude': longitude,
-        'token': 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A',
-        'map_style': 'mapbox://styles/mapbox/streets-v11',
-        'zoom': 15,
-        'center': [longitude, latitude],
-        'interactive': True,
-        'ultimos_links': ultimos_links
-    }
+        context = {
+            'latitude': -27.35917,
+            'longitude': -53.39444,
+            'token': 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A',
+            'map_style': 'mapbox://styles/mapbox/streets-v11',
+            'zoom': 15,
+            'center': [-53.39444, -27.35917],
+            'interactive': True,
+            'ultimos_links': []
+        }
 
     return render(request, 'home.html', context)
+
 
 def signup(request):
     if request.method == 'GET':
