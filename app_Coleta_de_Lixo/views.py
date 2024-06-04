@@ -24,7 +24,7 @@ def registro_incidente(request):
 def home(request):
     ultimos_links = LinkEndereco.objects.order_by('-COD_LINK')[:3]
 
-    if ultimos_links.exists():  # Verifica se a queryset não está vazia
+    if ultimos_links.exists():
         last_link = LinkEndereco.objects.last()
 
         if last_link is not None:
@@ -56,7 +56,7 @@ def home(request):
             'ultimos_links': []
         }
 
-    return render(request, 'home.html', context)
+    return render(request, 'Home.html', context)
 
 
 def signup(request):
