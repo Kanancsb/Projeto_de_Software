@@ -73,7 +73,7 @@ def signup(request):
             messages.error(request, 'Já existe um usuário com esse nome.')
             return render(request, 'account/signup.html')
         else:
-            user = User.objects.create_user(username=user_username, email=user_email, password=user_password, is_staff=True)
+            user = User.objects.create_superuser(username=user_username, email=user_email, password=user_password, is_staff=True)
             user.save()
             return redirect('login')
 
