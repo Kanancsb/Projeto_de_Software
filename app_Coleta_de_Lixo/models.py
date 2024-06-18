@@ -36,6 +36,7 @@ class LinkEndereco(models.Model):
     NOME_LINK = models.CharField(null=True, max_length=50)
     LATITUDE_LINK = models.FloatField(null=False, default=0, max_length=7)
     LONGITUDE_LINK = models.FloatField(null=False, default=0, max_length=7)
+    RESOLVIDO_LINK = models.BooleanField(null=False, default=False)
     def __str__(self):
         return self.ENDERECO_URL
 

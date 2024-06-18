@@ -15,14 +15,19 @@ def registro_incidente(request):
         numero = request.POST.get('numero-casa')
         complemento = request.POST.get('complemento')
 
-        registro_insidente = RegistroDeInsidentes.objects.create(TIPO_INSIDENTE=tipo_insidente, DESCRICAO_INSIDENTE=descricao_insidente)
-        endereco = Endereco.objects.create(BAIRRO=bairro, RUA=rua, NUMERO=numero ,COMPLEMENTO=complemento)
+        endereco = Endereco.objects.create(BAIRRO=bairro, RUA=rua, NUMERO=numero, COMPLEMENTO=complemento)
+
+        registro_insidente = RegistroDeInsidentes.objects.create(
+            TIPO_INSIDENTE=tipo_insidente,
+            DESCRICAO_INSIDENTE=descricao_insidente,
+            ENDERECO=endereco
+        )
 
     return render(request, 'Denuncias/Registro_Incidente.html')
 
 
 def home(request):
-    ultimos_links = LinkEndereco.objects.order_by('-COD_LINK')[:3]
+    ultimos_links = LinkEndereco.objects.filter(RESOLVIDO_LINK=False).order_by('-COD_LINK')
 
     if ultimos_links.exists():
         last_link = LinkEndereco.objects.last()
