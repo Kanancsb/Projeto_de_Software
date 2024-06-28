@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/migrations/0007_alter_endereco_options_alter_linkendereco_options_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/coleta-residuo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,35 +42,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "PreAuth",
-    "last_opened_file_path": "C:/Users/kanan/PycharmProjects/Projeto_de_Software/app_Coleta_de_Lixo/templates/admin",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PreAuth&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kanan/PycharmProjects/Projeto_de_Software/app_Coleta_de_Lixo/templates/admin&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\app_Coleta_de_Lixo\templates\admin" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\images" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\app_Coleta_de_Lixo\templates\admin" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\css" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\css\account" />
       <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static\css\bootstrap-5.3.3-dist\css" />
-      <recent name="C:\Users\kanan\PycharmProjects\Projeto_de_Software\static" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -110,6 +111,7 @@
       <workItem from="1716424384859" duration="1910000" />
       <workItem from="1717533664859" duration="1197000" />
       <workItem from="1718667910177" duration="2753000" />
+      <workItem from="1719535793244" duration="1917000" />
     </task>
     <servers />
   </component>

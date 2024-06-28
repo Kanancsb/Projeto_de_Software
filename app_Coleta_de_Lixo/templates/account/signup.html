@@ -19,6 +19,14 @@
 
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastrar</p>
 
+                    {% if messages %}
+                      {% for message in messages %}
+                        <div class="alert alert-danger" role="alert">
+                          {{ message }}
+                        </div>
+                      {% endfor %}
+                    {% endif %}
+
                     <form class="mx-1 mx-md-4" action="{% url 'signup' %}" method="POST">
                       {% csrf_token %}
                       <div class="d-flex flex-row align-items-center mb-4">
@@ -26,13 +34,6 @@
                         <div class="form-outline flex-fill mb-0">
                           <input type="text" id="user_username" class="form-control" name="user_username" />
                           <label class="form-label" for="user_username">Nome Completo</label>
-                          {% if messages %}
-                            {% for message in messages %}
-                              <div class="alert alert-danger" role="alert">
-                                {{ message }}
-                              </div>
-                            {% endfor %}
-                          {% endif %}
                         </div>
                       </div>
 

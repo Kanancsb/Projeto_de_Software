@@ -9,45 +9,57 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
 
     <style>
-        #map{
-            width: 400px;
-            height: 300px;
+        #map {
+            width: 100%;
+            height: 450px;
             border-radius: 15px;
             border: 2px solid black;
+        }
+        .left-section {
+            padding: 20px;
+        }
+        .right-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .incident-list-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .incident-list {
+            padding: 0;
+            margin: 0;
+        }
+        .incident-list li {
+            list-style-type: none;
         }
     </style>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 40vh;">
-            <div class="col-sm-12 col-md-10">
+        <div class="row">
+            <div class="col-md-6 left-section">
                 <div class="card text-white bg-dark mb-3" id="title_div">
                     <ul class="list-group">
-                            <li class="list-group-item bg-dark text-white"><p class="text-light">Bem-vindo ao nosso Aplicativo de Monitoramento e Coleta de Resíduos - sua solução completa para uma gestão eficaz de resíduos e um passo significativo em direção à sustentabilidade ambiental!</p></li>
-                        </ul>
-                    </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 30vh;">
-            <div class="col-sm-12 col-md-10">
+                        <li class="list-group-item bg-dark text-white">
+                            <p class="text-light">Bem-vindo ao nosso Aplicativo de Monitoramento e Coleta de Resíduos - sua solução completa para uma gestão eficaz de resíduos e um passo significativo em direção à sustentabilidade ambiental!</p>
+                        </li>
+                    </ul>
+                </div>
                 <div class="card text-white bg-dark mb-3">
                     <div class="card-header text-success">Descarte adequado, Reciclagem Promovida:</div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item bg-dark text-white"><p class="card-text">Nosso aplicativo foi meticulosamente desenvolvido para simplificar o processo de descarte de resíduos e incentivar a reciclagem. Com uma interface intuitiva e funcionalidades abrangentes, estamos aqui para atender às suas necessidades e facilitar o gerenciamento tanto para usuários quanto para administradores.</p></li>
+                            <li class="list-group-item bg-dark text-white">
+                                <p class="card-text">Nosso aplicativo foi meticulosamente desenvolvido para simplificar o processo de descarte de resíduos e incentivar a reciclagem. Com uma interface intuitiva e funcionalidades abrangentes, estamos aqui para atender às suas necessidades e facilitar o gerenciamento tanto para usuários quanto para administradores.</p>
+                            </li>
                         </ul>
-                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 30vh;">
-            <div class="col-sm-12 col-md-10">
                 <div class="card text-white bg-dark mb-3">
                     <div class="card-header text-success">Plataforma Dinâmica:</div>
                     <div class="card-body">
@@ -57,15 +69,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 30vh;">
-            <div class="col-sm-12 col-md-10">
                 <div class="card text-white bg-dark mb-3">
-                    <div class="card-header"> <a class="nav-link text-success" href="{% url 'registro_incidente' %}">Registrar Incidente:</a> </div>
+                    <div class="card-header">
+                        <a class="nav-link text-success" href="{% url 'registro_incidente' %}">Registrar Incidente:</a>
+                    </div>
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item bg-dark text-white">Capacidade para os usuários reportarem problemas específicos, como acúmulos de resíduos em áreas específicas.</li>
@@ -74,37 +81,32 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" style="height: 30vh;">
-            <div class="col-sm-12 col-md-10">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header text-success"> Ultimos incidentes registrados </div>
-                        <div class="card-body" style="display: flex; justify-content: space-between;">
-                            <div id='map' style='width: 400px; height: 300px;'></div>
-                            <script>
-                                mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A';
-                                var map = new mapboxgl.Map({
-                                    container: 'map',
-                                    style: 'mapbox://styles/mapbox/streets-v11',
-                                    zoom: 15,
-                                    center: [{{ longitude|safe }}, {{ latitude|safe }}]
-                                });
-                            </script>
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    {% for link in ultimos_links %}
-                                        <li class="list-group-item bg-dark text-white"><a href="{{ link.ENDERECO_URL }}" class="nav-link text-white">{{ link.NOME_LINK }}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
+            <div class="col-md-6 right-section">
+                <div id="map"></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v11',
+                        zoom: 15,
+                        center: [{{ longitude|safe }}, {{ latitude|safe }}]
+                    });
+                </script>
+                <div class="card text-white bg-dark mb-3 incident-list-container">
+                    <div class="card-header text-success">Últimos incidentes registrados</div>
+                    <div class="card-body incident-list">
+                        <ul class="list-group">
+                            {% for link in ultimos_links %}
+                                <li class="list-group-item bg-dark text-white">
+                                    <a href="{{ link.ENDERECO_URL }}" class="nav-link text-white" target="_blank">{{ link.NOME_LINK }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

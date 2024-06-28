@@ -71,16 +71,31 @@ def signup(request):
         user_username = request.POST.get('user_username')
         user_email = request.POST.get('user_email')
         user_password = request.POST.get('user_password')
+        confirm_password = request.POST.get('confirm_password')
+
+        if not user_username or not user_email or not user_password or not confirm_password:
+            messages.error(request, 'Todos os campos são obrigatórios.')
+            return render(request, 'account/signup.html')
+
+        if user_password != confirm_password:
+            messages.error(request, 'As senhas não coincidem.')
+            return render(request, 'account/signup.html')
 
         user_exist = User.objects.filter(username=user_username).first()
 
         if user_exist:
             messages.error(request, 'Já existe um usuário com esse nome.')
             return render(request, 'account/signup.html')
-        else:
-            user = User.objects.create_superuser(username=user_username, email=user_email, password=user_password, is_staff=True)
-            user.save()
-            return redirect('login')
+
+        user_exist_email = User.objects.filter(email=user_email).first()
+
+        if user_exist_email:
+            messages.error(request, 'Já existe um usuário com esse e-mail.')
+            return render(request, 'account/signup.html')
+
+        user = User.objects.create_superuser(username=user_username, email=user_email, password=user_password, is_staff=True)
+        user.save()
+        return redirect('login')
 
 def login_view(request):
     if request.method == 'GET':
