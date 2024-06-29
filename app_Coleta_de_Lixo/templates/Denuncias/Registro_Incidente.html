@@ -3,6 +3,15 @@
 <html lang="en">
 <head>
     <title>Registro de Incidentes</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
     <section class="vh-100">
@@ -11,6 +20,10 @@
                 <form action="{% url 'registro_incidente' %}" method="POST" class="row g-3 needs-validation" novalidate>
                     {% csrf_token %}
                     <h1>Registro de Incidente</h1>
+
+                    <div id="map"></div>
+                    <input type="hidden" id="latitude" name="latitude" value="0" readonly>
+                    <input type="hidden" id="longitude" name="longitude" value="0" readonly>
 
                     <div class="row">
                         <div class="col-md-6">
@@ -69,5 +82,30 @@
             </div>
         </div>
     </section>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuYW4xMjMiLCJhIjoiY2x2bGVxc2Z5MmEyODJycGh4czFwbnhzNSJ9.QLx0-ruC1MtD8BQfZl5_7A';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-53.39444, -27.35917],
+            zoom: 15
+        });
+
+        var marker;
+
+        map.on('click', function (e) {
+            var coordinates = e.lngLat;
+            document.getElementById('latitude').value = coordinates.lat;
+            document.getElementById('longitude').value = coordinates.lng;
+
+            if (marker) {
+                marker.setLngLat(coordinates);
+            } else {
+                marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map);
+            }
+        });
+    </script>
 </body>
 </html>

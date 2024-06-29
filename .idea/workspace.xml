@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640fc657-3dd2-49ae-b45e-156c5e0bb9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/coleta-residuo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_Incidente.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/templates/Denuncias/Registro_Incidente.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_Coleta_de_Lixo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +111,7 @@
       <workItem from="1717533664859" duration="1197000" />
       <workItem from="1718667910177" duration="2753000" />
       <workItem from="1719535793244" duration="1917000" />
+      <workItem from="1719665187745" duration="2913000" />
     </task>
     <servers />
   </component>
