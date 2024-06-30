@@ -1,0 +1,155 @@
+{% load static %}
+{% include 'BaseTemplate.html' %}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/bootstrap-5.3.3-dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'icons/favicon.png' %}">
+    <title>Painel Administrativo</title>
+    <style>
+        h1, h2{
+            font-family: 'PtSerif-Regular', serif;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-4 mb-4">Painel Administrativo</h1>
+
+    <div class="mb-5">
+        <h2>Endereços</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rua</th>
+                    <th>Número</th>
+                    <th>Bairro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for endereco in enderecos %}
+                <tr>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <td>
+                            <input type="hidden" name="endereco_id" value="{{ endereco.COD_ENDERECO }}">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="rua" value="{{ endereco.RUA }}">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="numero" value="{{ endereco.NUMERO }}">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="bairro" value="{{ endereco.BAIRRO }}">
+                            </div>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-success">Salvar Alterações</button>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mb-5">
+        <h2>Registros de Incidentes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tipo de Incidente</th>
+                    <th>Descrição do Incidente</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for registro in registros %}
+                <tr>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <td>
+                            <input type="hidden" name="registro_id" value="{{ registro.COD_REGISTRO }}">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="tipo_incidente" value="{{ registro.TIPO_INSIDENTE }}">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mb-3">
+                                <textarea class="form-control" name="descricao_incidente" rows="3">{{ registro.DESCRICAO_INSIDENTE }}</textarea>
+                            </div>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-success">Salvar Alterações</button>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Links de Endereços</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Endereço URL</th>
+                    <th>Nome do Link</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Resolvido</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for link in links %}
+                <tr>
+
+                        <form method="post" action="">
+                            {% csrf_token %}
+                    <td>
+                        <input type="hidden" name="link_id" value="{{ link.COD_LINK }}">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="endereco_url" value="{{ link.ENDERECO_URL }}">
+                            </div>
+                    </td>
+                    <td><div class="mb-3">
+                                <input type="text" class="form-control" name="nome_link" value="{{ link.NOME_LINK }}">
+                            </div></td>
+                    <td><div class="mb-3">
+                                <input type="text" class="form-control" name="latitude_link" value="{{ link.LATITUDE_LINK }}">
+                            </div></td>
+                    <td><div class="mb-3">
+                                <input type="text" class="form-control" name="longitude_link" value="{{ link.LONGITUDE_LINK }}">
+                            </div></td>
+                            <td>
+                                <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" name="resolvido_link" {% if link.RESOLVIDO_LINK %}checked{% endif %}>
+                                <label class="form-check-label">Resolvido</label>
+                            </div>
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-success">Salvar Alterações</button>
+                            </td>
+                        </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

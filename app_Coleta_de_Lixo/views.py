@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import RegistroDeInsidentes, Endereco, LinkEndereco
+from .forms import EnderecoForm, LinkEnderecoForm, RegistroDeInsidentesForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -41,7 +42,7 @@ def home(request):
     ultimos_links = LinkEndereco.objects.filter(RESOLVIDO_LINK=False).order_by('-COD_LINK')
 
     if ultimos_links.exists():
-        last_link = LinkEndereco.objects.last()
+        last_link = ultimos_links.first()  # Obter o primeiro link não resolvido, não o último global
 
         if last_link is not None:
             latitude = last_link.LATITUDE_LINK
@@ -127,3 +128,63 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+
+def admin_view(request):
+    enderecos = Endereco.objects.all()
+    registros = RegistroDeInsidentes.objects.all()
+    links = LinkEndereco.objects.all()
+
+    if request.method == 'POST':
+        endereco_id = request.POST.get('endereco_id')
+        if endereco_id:
+            rua = request.POST.get('rua')
+            numero = request.POST.get('numero')
+            bairro = request.POST.get('bairro')
+
+            endereco = Endereco.objects.get(pk=endereco_id)
+            endereco.RUA = rua
+            endereco.NUMERO = numero
+            endereco.BAIRRO = bairro
+            endereco.save()
+
+        registro_id = request.POST.get('registro_id')
+        if registro_id:
+            tipo_incidente = request.POST.get('tipo_incidente')
+            descricao_incidente = request.POST.get('descricao_incidente')
+
+            registro = RegistroDeInsidentes.objects.get(pk=registro_id)
+            registro.TIPO_INSIDENTE = tipo_incidente
+            registro.DESCRICAO_INSIDENTE = descricao_incidente
+            registro.save()
+
+        link_id = request.POST.get('link_id')
+        if link_id:
+            endereco_url = request.POST.get('endereco_url')
+            nome_link = request.POST.get('nome_link')
+            latitude_link = request.POST.get('latitude_link').replace(',', '.')
+            longitude_link = request.POST.get('longitude_link').replace(',', '.')
+            resolvido_link = request.POST.get('resolvido_link')
+
+            if resolvido_link == 'on':
+                resolvido_link = True
+            else:
+                resolvido_link = False
+
+            link = LinkEndereco.objects.get(pk=link_id)
+            link.ENDERECO_URL = endereco_url
+            link.NOME_LINK = nome_link
+            link.LATITUDE_LINK = float(latitude_link)
+            link.LONGITUDE_LINK = float(longitude_link)
+            link.RESOLVIDO_LINK = resolvido_link
+            link.save()
+
+        return redirect('admin_index')
+
+    context = {
+        'enderecos': enderecos,
+        'registros': registros,
+        'links': links,
+    }
+
+    return render(request, 'admin_pages/admin_index.html', context)
